@@ -7,11 +7,19 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\hex_img</sprite>
+    <sprite>sprites\cowboy_img</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\shoot.gml</script>
+    <script>scripts\connect_hex.gml</script>
+    <script>scripts\initialize_hex.gml</script>
+    <script>scripts\find_hex_neighbor.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\hex</object>
+    <object>objects\Hex</object>
+    <object>objects\Cowboy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
