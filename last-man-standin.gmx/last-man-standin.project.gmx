@@ -18,10 +18,16 @@
     <script>scripts\find_hex_neighbor.gml</script>
     <script>scripts\instance_place_list.gml</script>
     <script>scripts\drop_cowboy_on_hex.gml</script>
+    <script>scripts\draw_text_shadow.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fat_font</font>
+    <font>fonts\fat_font_small</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Hex</object>
     <object>objects\Cowboy</object>
+    <object>objects\Controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

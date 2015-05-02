@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,43 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Draw score
-globalvar points;
+            <string>globalvar points;
 draw_set_font(fat_font);
-draw_text_shadow(10, 10, points);
-
-// Draw instructions
-draw_set_font(fat_font_small);
-draw_text_shadow(10, 30,"
-- Try to kill all the cowboys!#
-- Click and drag a cowboy to move him#
-- Drop a cowboy on another cowboy to swap them#
-- When you drop a cowboy, he will fire his gun#
-- When a cowboy is shot, he will fire his gun#
-- Press R to reset");
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>room_restart();
+draw_set_color(c_black);
+draw_text(11, 11, points);
+draw_set_color(c_white);
+draw_text(10, 10, points);
 </string>
           </argument>
         </arguments>
