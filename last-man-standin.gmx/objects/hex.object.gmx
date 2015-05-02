@@ -27,6 +27,12 @@
             <kind>1</kind>
             <string>scale = 1;
 target_scale = 1;
+
+// Set the hex of a cowboy who might be on this hex
+var cowboy = instance_place(x, y, Cowboy);
+if (cowboy != noone) {
+    cowboy.hex = self;
+}
 </string>
           </argument>
         </arguments>
@@ -119,7 +125,33 @@ target_scale = 1;
           <argument>
             <kind>1</kind>
             <string>target_scale = 1;
-shoot(id, 0, true);
+
+// Drop cowboy here &amp; shoot
+globalvar carying_cowboy;
+var cowboys_on_hex = instance_place_list(x, y, Cowboy);
+if (carying_cowboy != noone) {
+
+    // If the carying-cowboy is the only one on the hex, just drop him
+    if (array_length_1d(cowboys_on_hex) == 1) {
+        drop_cowboy_on_hex(carying_cowboy, id, true);
+    
+    // If there is already a cowboy here, swap them
+    } else if (array_length_1d(cowboys_on_hex) == 2) {
+    
+        // Get a reference to the cowboy that was already on this space
+        var other_cowboy = cowboys_on_hex[0];
+        if (other_cowboy == carying_cowboy) {
+            other_cowboy = cowboys_on_hex[1];
+        }
+        
+        // Swap them
+        drop_cowboy_on_hex(other_cowboy, carying_cowboy.hex, false);
+        drop_cowboy_on_hex(carying_cowboy, id, true);
+    }
+
+    // Clear the carying cowboy
+    carying_cowboy = noone;
+}
 </string>
           </argument>
         </arguments>
@@ -143,6 +175,10 @@ shoot(id, 0, true);
           <argument>
             <kind>1</kind>
             <string>target_scale = .9;
+
+// Pick up cowboy on this tile if there is one
+globalvar carying_cowboy;
+carying_cowboy = instance_place(x, y, Cowboy);
 </string>
           </argument>
         </arguments>

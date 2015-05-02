@@ -16,6 +16,8 @@
     <script>scripts\connect_hex.gml</script>
     <script>scripts\initialize_hex.gml</script>
     <script>scripts\find_hex_neighbor.gml</script>
+    <script>scripts\instance_place_list.gml</script>
+    <script>scripts\drop_cowboy_on_hex.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Hex</object>

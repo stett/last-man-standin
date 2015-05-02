@@ -25,7 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir = floor(random(6));
+            <string>// Initialize global selected cowboy
+globalvar carying_cowboy;
+carying_cowboy = noone;
+
+// Initialize this cowboy's direction
+dir = floor(random(6));
+
+// Set the hex if one is found
+var _hex = instance_place(x, y, Hex);
+if (_hex != noone) {
+    self.hex = _hex;
+}
 </string>
           </argument>
         </arguments>
@@ -49,6 +60,37 @@
           <argument>
             <kind>1</kind>
             <string>image_index = dir;
+
+// Move to mouse if we are the one being caried
+globalvar carying_cowboy;
+if (carying_cowboy == id) {
+    x = mouse_x;
+    y = mouse_y;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_color(c_green);
+draw_line(x, y, hex.x, hex.y);
 </string>
           </argument>
         </arguments>
