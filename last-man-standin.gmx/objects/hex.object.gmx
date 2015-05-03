@@ -201,7 +201,7 @@ carying_cowboy = instance_place(x, y, Cowboy);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_alpha(.1);
+            <string>/*draw_set_alpha(.1);
 
 // Draw lines connecting to adjacent tiles
 draw_set_color(c_red);
@@ -227,7 +227,7 @@ if (northeast != noone) {
     draw_line(x-1, y-1, northeast.x-1, northeast.y-1);
 }
 
-draw_set_alpha(1);
+draw_set_alpha(1);*/
 </string>
           </argument>
         </arguments>

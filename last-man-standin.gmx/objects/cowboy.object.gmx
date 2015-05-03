@@ -89,8 +89,8 @@ if (carying_cowboy == id) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_green);
-draw_line(x, y, hex.x, hex.y);
+            <string>/*draw_set_color(c_green);
+draw_line(x, y, hex.x, hex.y);*/
 </string>
           </argument>
         </arguments>

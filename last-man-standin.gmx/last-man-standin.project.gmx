@@ -8,6 +8,12 @@
   <sprites name="sprites">
     <sprite>sprites\hex_img</sprite>
     <sprite>sprites\cowboy_img</sprite>
+    <sprite>sprites\cowboy_e_img</sprite>
+    <sprite>sprites\cowboy_se_img</sprite>
+    <sprite>sprites\cowboy_sw_img</sprite>
+    <sprite>sprites\cowboy_w_img</sprite>
+    <sprite>sprites\cowboy_nw_img</sprite>
+    <sprite>sprites\cowboy_ne_img</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -28,9 +34,21 @@
     <object>objects\Hex</object>
     <object>objects\Cowboy</object>
     <object>objects\Controller</object>
+    <objects name="Cowboys">
+      <object>objects\CowboyE</object>
+      <object>objects\CowboySE</object>
+      <object>objects\CowboySW</object>
+      <object>objects\CowboyW</object>
+      <object>objects\CowboyNW</object>
+      <object>objects\CowboyNE</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
+    <room>rooms\room2</room>
+    <room>rooms\room3</room>
+    <room>rooms\room4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

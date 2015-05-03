@@ -2,11 +2,11 @@
 var hex = argument0;
 var dir = argument1;
 var first = argument2;
-globalvar multiplier;
+globalvar kills;
 globalvar points;
 
 if (first) {
-    multiplier = 0;
+    kills = 0;
 }
 
 // Kill the current cowboy if there is one and this isn't the first shot
@@ -20,11 +20,12 @@ with (hex) {
             with (cowboy) { instance_destroy(); }
             
             // Update the multiplier
-            if (multiplier < 2) {
+            kills ++;
+            /*if (multiplier < 2) {
                 multiplier += 1;
             } else {
                 multiplier *= multiplier;
-            }
+            }*/
         }
     }
 }
@@ -59,5 +60,5 @@ if (next_hex != noone) {
 
 // If ther wasn't another hex, add to the score
 } else {
-    points += multiplier;
+    points += kills * kills;
 }
